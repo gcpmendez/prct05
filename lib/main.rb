@@ -13,7 +13,7 @@ a.simp
 b.simp
 puts "  a = #{a.to_s}"
 puts "  b = #{b.to_s}"
-puts "Suma: #{a.sum(b).to_s}"
-puts "Resta: #{a.res(b).to_s}"
-puts "Multiplicación: #{a.mul(b).to_s}"
-puts "División: #{a.div(b).to_s}"
+puts "Suma: #{a.+(b).to_s}"
+puts "Resta: #{a.-(b).to_s}"
+puts "Multiplicación: #{a.·(b).to_s}"
+puts "División: #{a./(b).to_s}"

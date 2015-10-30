@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 # encoding: utf-8
 
+# Corrección de cannot load such file!!!
 class Racional
     attr_accessor :num, :den
     
@@ -24,28 +25,28 @@ class Racional
     end
 	
 	# Cálcula suma
-    def sum(other)
+    def +(other)
         n=(@num*other.den)+(other.num*@den)
         d=@den*other.den
         Racional.new(n,d)
     end
     
     # Cálcula resta
-    def res(other)
+    def -(other)
         n=(@num*other.den)-(other.num*@den)
         d=@den*other.den
         Racional.new(n,d)
     end
     
     # Cálcula multiplicación
-    def mul(other)
+    def ·(other)
         n=(@num*other.num)
         d=@den*other.den
         Racional.new(n,d)
     end
     
     # Cálcula división
-    def div(other)
+    def /(other)
         n=(@num*other.den)
         d=@den*other.num
         Racional.new(n,d)
