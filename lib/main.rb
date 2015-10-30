@@ -6,14 +6,14 @@ a=Racional.new(5,20)
 b=Racional.new(12,18)
 
 puts "Racionales sin simplificar"
-puts "  a = #{a.string}"
-puts "  b = #{b.string}"
+puts "  a = #{a.to_s}"
+puts "  b = #{b.to_s}"
 puts "Racionales simplificadas: "
 a.simp
 b.simp
-puts "  a = #{a.string}"
-puts "  b = #{b.string}"
-puts "Suma: #{a.sum(b).string}"
-puts "Resta: #{a.res(b).string}"
-puts "Multiplicación: #{a.mul(b).string}"
-puts "División: #{a.div(b).string}"
+puts "  a = #{a.to_s}"
+puts "  b = #{b.to_s}"
+puts "Suma: #{a.sum(b).to_s}"
+puts "Resta: #{a.res(b).to_s}"
+puts "Multiplicación: #{a.mul(b).to_s}"
+puts "División: #{a.div(b).to_s}"

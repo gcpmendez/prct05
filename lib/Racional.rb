@@ -18,41 +18,37 @@ class Racional
 	end
 	
 	# Imprime racional
-    def string
+    def to_s
     	# Interpola el valor del atributo para meterlo en el string, #{ atributo }
-        return "#{@num}/#{@den}"
+        "#{@num}/#{@den}"
     end
 	
 	# Cálcula suma
     def sum(other)
         n=(@num*other.den)+(other.num*@den)
         d=@den*other.den
-        r = Racional.new(n,d)
-        return r
+        Racional.new(n,d)
     end
     
     # Cálcula resta
-    def res(fraccion)
-        n=(@num*fraccion.den)-(fraccion.num*@den)
-        d=@den*fraccion.den
-        r=Racional.new(n,d)
-        return r
+    def res(other)
+        n=(@num*other.den)-(other.num*@den)
+        d=@den*other.den
+        Racional.new(n,d)
     end
     
     # Cálcula multiplicación
-    def mul(fraccion)
-        n=(@num*fraccion.num)
-        d=@den*fraccion.den
-        r=Racional.new(n,d)
-        return r
+    def mul(other)
+        n=(@num*other.num)
+        d=@den*other.den
+        Racional.new(n,d)
     end
     
     # Cálcula división
-    def div(fraccion)
-        n=(@num*fraccion.den)
-        d=@den*fraccion.num
-        r=Racional.new(n,d)
-        return r
+    def div(other)
+        n=(@num*other.den)
+        d=@den*other.num
+        Racional.new(n,d)
     end
     
     # Cálculo mcd
