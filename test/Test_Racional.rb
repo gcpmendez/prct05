@@ -1,10 +1,10 @@
 # encoding: utf-8
+
 require 'lib/Racional.rb'
 require 'test/unit'
 
 class TestRacional < Test::Unit::TestCase
     def setup
-        #@error = Racional.new(1,0)
         @unidad = Racional.new(2,2)
         @natural = Racional.new(4)
         @simplificable = Racional.new(12,24)
@@ -14,7 +14,7 @@ class TestRacional < Test::Unit::TestCase
 		@op2 = Racional.new(12,18)
     end
     
-    def test_aritmeticos
+    def test_aritmetic
         #suma
         assert_equal("11/12",(@op1.sum(@op2)).to_s)
         
@@ -28,7 +28,10 @@ class TestRacional < Test::Unit::TestCase
         
         #división
         assert_equal("3/8",(@op1.div(@op2)).to_s)
-        
-
+    end
+    
+    def test_exceptions
+		assert_raise(ArgumentError){Racional.new("one",1)}
+		assert_raise(ZeroDivisionError){Racional.new(1,0)}
     end
 end
