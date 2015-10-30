@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+# encoding: utf-8
 
 class Racional
     attr_accessor :num, :den
@@ -12,6 +13,7 @@ class Racional
 		# Variables de instancia
 		@num, @den = num, den
 		# Si no pongo nada no devuelve el objeto construido si no la última línea
+		simp
 		return self
 	end
 	
@@ -22,10 +24,10 @@ class Racional
     end
 	
 	# Cálcula suma
-    def sum(fraccion)
-        n=(@num*fraccion.den)+(fraccion.num*@den)
-        d=@den*fraccion.den
-        r=Racional.new(n,d)
+    def sum(other)
+        n=(@num*other.den)+(other.num*@den)
+        d=@den*other.den
+        r = Racional.new(n,d)
         return r
     end
     

@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+# encoding: utf-8
 require "./Racional.rb"
 
 a=Racional.new(5,20)
